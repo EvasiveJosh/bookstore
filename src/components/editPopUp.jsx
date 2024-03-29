@@ -6,12 +6,12 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const editPopUp = (bookId, editBook) =>{
 
-  const handleChange = ({editBook}) =>{
-    dispatch(editBook({id:bookId,field:'title',value:'edit-title'}));
-    dispatch(editBook({id:bookId,field:"price",value:'edit-price'}));
-    dispatch(editBook({id:bookId,field:"category",value:'edit-category'}));
-    dispatch(editBook({id:bookId,field:"description",value:'edit-description'}));
-  }
+  // const handleChange = ({editBook}) =>{
+  //   dispatch(editBook({id:bookId,field:'title',value:'edit-title'}));
+  //   dispatch(editBook({id:bookId,field:"price",value:'edit-price'}));
+  //   dispatch(editBook({id:bookId,field:"category",value:'edit-category'}));
+  //   dispatch(editBook({id:bookId,field:"description",value:'edit-description'}));
+  // }
   return(
     <>
       <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -26,20 +26,20 @@ const editPopUp = (bookId, editBook) =>{
               </div>
               <div className="modal-body">
                 <div className='title'>
-                  <input type='text' id='edit-title' name="title" minLength={5} maxLength={50}/>
+                  <input type='text' id='edit-title' name="title" minLength={5} maxLength={50} onChange={dispatch(editBook({id:bookId,field:'title',value:'edit-title'}))}/>
                 </div>
                 <div className='price'>
-                  <input type='text' id='edit-price' name="price" minLength={5} maxLength={50}/>
+                  <input type='text' id='edit-price' name="price" minLength={5} maxLength={50} onChange={dispatch(editBook({id:bookId,field:"price",value:'edit-price'}))}/>
                 </div>
                 <div className='category'>
-                  <input type='text' id='edit-category' name="category" minLength={5} maxLength={50}/>
+                  <input type='text' id='edit-category' name="category" minLength={5} maxLength={50} onChange={dispatch(editBook({id:bookId,field:"category",value:'edit-category'}))}/>
                 </div>
                 <div className='discription'>
-                  <input type='text' id='edit-description' name="description" minLength={5} maxLength={50}/>    
+                  <input type='text' id='edit-description' name="description" minLength={5} maxLength={50} onChange={dispatch(editBook({id:bookId,field:"description",value:'edit-description'}))}/>    
                 </div>
               </div>
               <div className="modal-footer">
-                <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={handleChange}>Done</button>
+                <button type="button" className="btn btn-primary" data-bs-dismiss="modal">Done</button>
               </div>
             </div>
           </div>

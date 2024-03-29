@@ -3,8 +3,15 @@ import { nanoid } from '@reduxjs/toolkit'
 const bookArray = [
     {
         bookId: nanoid(),
-        name: '',
+        name: 'Harry Potter',
         price:'',
+        category:'',
+        descript:''
+    },
+    {
+        bookId: nanoid(),
+        name: 'Robinson Crusoe',
+        price: '',
         category:'',
         descript:''
     }
