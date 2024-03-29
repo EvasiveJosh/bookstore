@@ -14,7 +14,7 @@ export const BookList = () => {
   return (
     <section className="book-list">
       <h2>Book List</h2>
-      {renderedBooks}
+      {renderedBooks} 
     </section>
   )
 }

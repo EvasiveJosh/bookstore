@@ -5,14 +5,14 @@ const bookArray = [
         bookId: nanoid(),
         name: 'Harry Potter',
         price:'',
-        category:'',
+        category:'horror',
         descript:''
     },
     {
         bookId: nanoid(),
         name: 'Robinson Crusoe',
         price: '',
-        category:'',
+        category:'fiction',
         descript:''
     }
 ];
