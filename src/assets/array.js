@@ -17,4 +17,4 @@ const bookArray = [
     }
 ];
 
-export default {bookArray};
+export default bookArray;
