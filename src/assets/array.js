@@ -6,7 +6,7 @@ const bookArray = [
         name: 'Harry Potter',
         price:'',
         category:'horror',
-        descript:''
+        descript:'kid gets wizard'
     },
     {
         bookId: nanoid(),

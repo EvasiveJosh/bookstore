@@ -3,12 +3,12 @@ import "./App.css";
 // import editPopUp from "./components/editPopUp";
 import { BookList } from "./components/booklist";
 import { AddBookPopUp } from "./components/AddBookModal";
+import { EditBookPopUp } from "./components/EditBookModal";
 
 function App() {
   
   const [openAddModal,setAddModal] = useState(false);
   const [openEditModal,setEditModal] = useState(false);
-  
   return (
     <div className="flex">
       <div className="add-button">
