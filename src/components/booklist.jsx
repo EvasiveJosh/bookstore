@@ -7,12 +7,14 @@ import { useState } from 'react'
 
 export const BookList = () => {
   const books = useSelector(state => state.books)
+  
   const dispatch = useDispatch()
   const [selectedBook, setSelectedBook] = useState();
   const renderedBooks = books.map(book => (
     <div className='book'>
       <button className="book-excerpt" key={book.bookId} onClick={() => {setSelectedBook(book.bookId)}}>
         <h3>Title: {book.name}</h3>
+        <h2>{book.bookId}</h2>
         <p className='book-price'>Price: {book.price}</p>
         <p className='book-category'>Category: {book.category}</p>
         <p className="book-content">Description: {book.descript.substring(0, 500)}</p>
@@ -24,7 +26,6 @@ export const BookList = () => {
       </div>
     </div>
   ))
-
   return (
     <section className="book-list">
       <h2>Book List</h2>

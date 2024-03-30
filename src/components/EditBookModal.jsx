@@ -5,13 +5,11 @@ import { useDispatch, useSelector } from "react-redux";
 import "../styling/EditBookModal.css"
 
 export const EditBookPopUp = (bookId) =>{
-    const books = useSelector(state => state.books.find(book => book.bookId === props.bookId))
+    const books = useSelector(state => state.books.find((book => book.bookId === bookId.bookId)))
     const [newTitle,setTitle] = useState("")
     const [newPrice,setPrice] = useState("")
     const [newCategory,setCategory] = useState("")
     const [newDescription,setDescription] = useState("")
-    console.log(descript)
-
     const handleTitleChange = (e) =>{
         setTitle(e.target.value);
     };
@@ -25,8 +23,19 @@ export const EditBookPopUp = (bookId) =>{
         setDescription(e.target.value);
     };
     const dispatch = useDispatch()
-    const changes = {id:bookId,name:newTitle,price:newPrice,category:newCategory,descript:newDescription}
     return (
-        <h1>hello</h1>
+        <div className="background">
+            <div className="container">
+                <div className="title">
+                    <h1>Edit Book</h1>
+                </div>
+                <div className="body">
+                    
+                </div>
+                <div className="footer">
+
+                </div>
+            </div>
+        </div>
     );
 }
