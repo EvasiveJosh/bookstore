@@ -10,9 +10,10 @@ export const BookList = () => {
   
   const dispatch = useDispatch()
   const [selectedBook, setSelectedBook] = useState();
+  const [openEditModal,setEditModal] = useState(true);
   const renderedBooks = books.map(book => (
     <div className='book'>
-      <button className="book-excerpt" key={book.bookId} onClick={() => {setSelectedBook(book.bookId)}}>
+      <button className="book-excerpt" key={book.bookId} onClick={() => {setSelectedBook(book.bookId),setEditModal(true)}}>
         <h3>Title: {book.name}</h3>
         <h2>{book.bookId}</h2>
         <p className='book-price'>Price: {book.price}</p>
@@ -30,7 +31,7 @@ export const BookList = () => {
     <section className="book-list">
       <h2>Book List</h2>
       {renderedBooks} 
-      {selectedBook && <EditBookPopUp bookId={selectedBook} />}
+      {selectedBook && <EditBookPopUp bookId={selectedBook} closeModal={setEditModal}/> && openEditModal}
     </section>
   )
 }

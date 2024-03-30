@@ -8,7 +8,6 @@ import { EditBookPopUp } from "./components/EditBookModal";
 function App() {
   
   const [openAddModal,setAddModal] = useState(false);
-  const [openEditModal,setEditModal] = useState(false);
   return (
     <div className="flex">
       <div className="add-button">
@@ -16,9 +15,7 @@ function App() {
         {openAddModal && <AddBookPopUp closeAddBook={setAddModal}/>}
       </div>
       <div className="listgroup">
-        
         <BookList/>
-        
       </div>
     </div>
   );

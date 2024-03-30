@@ -1,12 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import { createBook } from "../reducers/bookreducer";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import "../styling/AddBookModal.css"
 import { nanoid } from "@reduxjs/toolkit";
 
 export const AddBookPopUp = ({closeAddBook}) =>{
-    const books = useSelector(state => state.books)
     const [newTitle,setTitle] = useState("")
     const [newPrice,setPrice] = useState("")
     const [newCategory,setCategory] = useState("")
