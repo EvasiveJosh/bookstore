@@ -15,7 +15,6 @@ export const BookList = () => {
     <div className='book'>
       <button className="book-excerpt" key={book.bookId} onClick={() => {setSelectedBook(book.bookId),setEditModal(true)}}>
         <h3>Title: {book.name}</h3>
-        <h2>{book.bookId}</h2>
         <p className='book-price'>Price: {book.price}</p>
         <p className='book-category'>Category: {book.category}</p>
         <p className="book-content">Description: {book.descript.substring(0, 500)}</p>
