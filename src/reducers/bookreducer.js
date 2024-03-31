@@ -9,7 +9,7 @@ const bookSlice = createSlice({
       state.push(action.payload);
     },
     removeBook(state, action) {
-      const idx = state.findIndex((book) => book.id === action.payload.id);
+      const idx = state.findIndex((book) => book.bookId === action.payload.bookId);
       if (idx !== -1) state.splice(idx, 1);
     },
     editBook(state, action) {
