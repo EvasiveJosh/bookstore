@@ -14,7 +14,7 @@ const bookSlice = createSlice({
     },
     editBook(state, action) {
         const { id, field, value } = action.payload
-        const book = state.find(book => book.id === id)
+        const book = state.find(book => book.bookId === id)
         if (book) book[field] = value
     }
   },

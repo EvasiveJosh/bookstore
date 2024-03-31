@@ -23,16 +23,20 @@ export const EditBookPopUp = (bookId,{closeModal}) =>{
         setDescription(e.target.value);
     };
     const handleTitleEdit = () =>{
-        dispatch(editBook(books.bookId,'name',newTitle))
+        const namePackage = {id:bookId.bookId,field:'name',value:newTitle}
+        dispatch(editBook(namePackage))
     };
     const handlePriceEdit = () =>{
-        dispatch(editBook(books.bookId,'price',newPrice))
+        const pricePackage = {id:bookId.bookId,field:'price',value:newPrice}
+        dispatch(editBook(pricePackage))
     };
     const handleCategoryEdit = () =>{
-        dispatch(editBook(books.bookId,'category',newCategory))
+        const categoryPackage = {id:bookId.bookId,field:'category',value:newCategory}
+        dispatch(editBook(categoryPackage))
     };
     const handleDescriptionEdit = () =>{
-        dispatch(editBook(books.bookId,'descript',newDescription))
+        const descriptPackage = {id:bookId.bookId,field:'descript',value:newDescription}
+        dispatch(editBook(descriptPackage))
     };
     
     const dispatch = useDispatch()
@@ -45,12 +49,11 @@ export const EditBookPopUp = (bookId,{closeModal}) =>{
                 <div className="body">
                     <input className="rounded-lg" type="text" placeholder={books.name} value={newTitle} onChange={handleTitleChange} required/>
                     <input className="rounded-lg" type="text" placeholder={books.price} value={newPrice} onChange={handlePriceChange} required/>
-                    <input className="rounded-lg" type="text" placeholder={books.category} value={newTitle} onChange={handleCategoryChange} required/>
+                    <input className="rounded-lg" type="text" placeholder={books.category} value={newCategory} onChange={handleCategoryChange} required/>
                     <input className="rounded-lg" type="text" placeholder={books.descript} value={newDescription} onChange={handleDescriptionChange} required/>
                 </div>
                 <div className="footer">
-                    <button onClick={()=>{handleTitleEdit(),handlePriceEdit(),handleCategoryEdit(),handleDescriptionEdit()}}>Save Changes</button>
-                    <button onClick={()=>{closeModal(false)}}>Close</button>
+                    <button onClick={()=>{handleTitleEdit(),handlePriceEdit(),handleCategoryEdit(),handleDescriptionEdit(),closeModal(false)}}>Save Changes</button>
                 </div>
             </div>
         </div>

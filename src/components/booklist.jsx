@@ -31,7 +31,7 @@ export const BookList = () => {
     <section className="book-list">
       <h2>Book List</h2>
       {renderedBooks} 
-      {selectedBook && <EditBookPopUp bookId={selectedBook} closeModal={setEditModal}/> && openEditModal}
+      {(selectedBook && <EditBookPopUp bookId={selectedBook} closeModal={setEditModal}/>)&&openEditModal}
     </section>
   )
 }
