@@ -13,7 +13,7 @@ const bookArray = [
         name: 'Robinson Crusoe',
         price: '10.99',
         category:'fiction',
-        descript:''
+        descript:'A man is stranded on an Island and has to live there for years until he is rescued'
     }
 ];
 
