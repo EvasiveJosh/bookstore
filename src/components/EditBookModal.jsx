@@ -54,7 +54,7 @@ export const EditBookPopUp = ({ bookId, closeModal }) =>{
                 </div>
                 <div className="body">
                     <input className="rounded-lg" type="text" placeholder={books.name} value={newTitle} onChange={handleTitleChange}/>
-                    <input className="rounded-lg" type="text" placeholder={books.price} value={newPrice} onChange={handlePriceChange}/>
+                    <input className="rounded-lg" type="number" placeholder={books.price} value={newPrice} onChange={handlePriceChange}/>
                     <input className="rounded-lg" type="text" placeholder={books.category} value={newCategory} onChange={handleCategoryChange}/>
                     <input className="rounded-lg" type="text" placeholder={books.descript} value={newDescription} onChange={handleDescriptionChange}/>
                 </div>

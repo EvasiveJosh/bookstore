@@ -6,3 +6,38 @@
 .delete{
     margin-top: 1rem;
 }
+
+.book-excerpt{
+    background-color: #2e5ca0; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+}
+.book-excerpt:hover{
+    background-color: #24537a;
+    color: white;
+}
+.delete-button{
+    background-color: #d93232; 
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 2px;
+    transition-duration: 0.4s;
+}
+
+.delete-button:hover{
+    background-color: #8f0707; 
+    color: white;
+}
+

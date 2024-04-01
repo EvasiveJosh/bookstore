@@ -23,6 +23,9 @@ export const AddBookPopUp = ({closeAddBook}) =>{
     const handleDescriptionChange = (e) =>{
         setDescription(e.target.value);
     };
+    const saveBook = () =>{
+        dispatch(createBook(newBook))
+    }
     const dispatch = useDispatch()  
     const newBook = {bookId:nanoid(),name:newTitle,price:newPrice,category:newCategory,descript:newDescription}
     return (
@@ -38,7 +41,7 @@ export const AddBookPopUp = ({closeAddBook}) =>{
                     </div>
                     
                     <div className="price input">
-                        <input className="rounded-lg" type="text" placeholder="price" value={newPrice} onChange={handlePriceChange} required/>
+                        <input className="rounded-lg" type="number" placeholder="price" value={newPrice} onChange={handlePriceChange} required/>
                     </div>
                     
                     <div className="category-input">
@@ -52,10 +55,7 @@ export const AddBookPopUp = ({closeAddBook}) =>{
                 </div>
                 <div className="footer">
                     <div className="save-button">
-                        <button onClick={() => dispatch(createBook(newBook))}>Save Book</button>
-                    </div>
-                    <div className="button">
-                        <button onClick={()=>closeAddBook(false)}>Close</button>
+                        <button className="saveButton" onClick={() => {saveBook(),closeAddBook(false)}}>Save Book</button>
                     </div>
                 </div>
             </div>

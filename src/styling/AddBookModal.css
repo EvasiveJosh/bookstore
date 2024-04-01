@@ -1,12 +1,14 @@
 .background {
     width: auto;
     height: 100vh;
-    background-color: rgba(200, 200, 200);
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-left: -273px;
+    margin-top:-350px
+    
 }
 
 .container {
@@ -46,8 +48,6 @@
     height: 45px;
     margin: 10px;
     border: none;
-    background-color: white;
-    color: white;
     border-radius: 8px;
     font-size: 20px;
     cursor: pointer; 
@@ -65,5 +65,24 @@
     cursor: pointer; 
     justify-content: center;   
 }
+
+.saveButton{
+    background-color: #ffffff; 
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  transition-duration: 0.4s;
+}
+
+.saveButton:hover{
+    background-color: #898c8f;
+    color: white;
+}
+
 
   
